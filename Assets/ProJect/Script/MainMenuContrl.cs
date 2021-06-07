@@ -12,6 +12,11 @@ public class MainMenuContrl : MonoBehaviour
     public GameObject[] MainMenuBtn;
     public GameObject[] MainMenuBtn_Text;
 
+    public GameObject AR_CarTrackMenu_Text;
+    public GameObject AR_CarShowMenu_Text;
+    public GameObject AR_ARCarMenu_Text;
+    public GameObject AR_FactorMenu_Text;
+
     void Start()
     {
         StartCoroutine("IEMainMenuContrl");
@@ -47,13 +52,35 @@ public class MainMenuContrl : MonoBehaviour
         }
     }
 
+    //ar 虚拟驾驶
     public void OpenAR_ARCarMenu()
     {
+        AR_ARCarMenu_Text.GetComponent<Text>().color = new Color(2 / 255, 255 / 255, 255 / 255, 255 / 255);
         SceneManager.LoadScene("CarMenu");
     }
 
+    //进入ar驾驶 界面
     public void OpenAR_CarShowMenu()
     {
+        AR_CarShowMenu_Text.GetComponent<Text>().color = new Color(2 / 255, 255 / 255, 255 / 255, 255 / 255);
         SceneManager.LoadScene("CarPaint_Quality_Very Low");
+    }
+    //ar 扫描模型
+    public void OpenAR_CarTrackMenu()
+    {
+        AR_CarTrackMenu_Text.GetComponent<Text>().color = new Color(2 / 255,255 / 255,255 / 255,255 / 255);
+    }
+    //工厂沙盘
+    public void OpenAR_FactorMenu()
+    {
+        AR_FactorMenu_Text.GetComponent<Text>().color = new Color(2 / 255, 255 / 255, 255 / 255, 255 / 255);
+    }
+
+    public void OpenAR_CarTrackMenu_Up()
+    {
+        AR_CarTrackMenu_Text.GetComponent<Text>().color = new Color(255, 255, 255, 255);
+        AR_CarShowMenu_Text.GetComponent<Text>().color = new Color(255, 255, 255, 255);
+        AR_ARCarMenu_Text.GetComponent<Text>().color = new Color(255, 255, 255, 255);
+        AR_FactorMenu_Text.GetComponent<Text>().color = new Color(255, 255, 255, 255);
     }
 }
