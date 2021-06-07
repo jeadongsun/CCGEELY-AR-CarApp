@@ -17,9 +17,26 @@ public class MainMenuContrl : MonoBehaviour
     public GameObject AR_ARCarMenu_Text;
     public GameObject AR_FactorMenu_Text;
 
+    public GameObject MainMenuBg_ipad;
+    public GameObject MainMenuBg_iphone;
+
     void Start()
     {
         StartCoroutine("IEMainMenuContrl");
+
+        string deviceInfo = SystemInfo.deviceModel.ToString();
+        bool isPhone = deviceInfo.Contains("iPhone");
+
+        if (isPhone == true)
+        {
+            MainMenuBg_ipad.SetActive(false);
+            MainMenuBg_iphone.SetActive(true);
+        }
+        else
+        {
+            MainMenuBg_ipad.SetActive(true);
+            MainMenuBg_iphone.SetActive(false);
+        }
     }
 
     IEnumerator IEMainMenuContrl()

@@ -21,6 +21,8 @@ public class CarRevealContrl : MonoBehaviour
 
     public GameObject[] Btn_OnSelect;
 
+    public GameObject[] Btn_Text;
+
     IEnumerator Start()
     {
 
@@ -85,7 +87,13 @@ public class CarRevealContrl : MonoBehaviour
         {
             item.GetComponent<Button>().interactable = true;
         }
+
+        foreach (var item in Btn_Text)
+        {
+            item.GetComponent<Text>().DOColor(new Color(255, 255, 255, 255),0f);
+        }
         CarPaintBtnItem[index].GetComponent<Button>().interactable = false;
+        Btn_Text[index].GetComponent<Text>().DOColor(new Color(2 / 255, 255 / 255, 255 / 255, 255 / 255),0f);
     }
 
     public void BackMainMenu()
