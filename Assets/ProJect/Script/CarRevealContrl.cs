@@ -328,6 +328,12 @@ public class CarRevealContrl : MonoBehaviour
         {
             item.SetActive(false);
         }
+        foreach (var item in CarPaintItem)
+        {
+            item.GetComponent<Image>().enabled = false;
+        }
+        CarPaintItem[index].GetComponent<Image>().enabled = true;
+
         Btn_OnSelect[index].SetActive(true);
     }
 
@@ -345,6 +351,13 @@ public class CarRevealContrl : MonoBehaviour
             item.SetActive(false);
         }
         CarWheelObj[index].SetActive(true);
+
+
+        foreach (var item in WheelBtnItem)
+        {
+            item.GetComponent<Image>().enabled = false;
+        }
+        WheelBtnItem[index].GetComponent<Image>().enabled = true;
     }
 
     void BgContrl(int index)
