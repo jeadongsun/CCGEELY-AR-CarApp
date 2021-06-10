@@ -5,19 +5,19 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/ProJect/Scene/MainMenu.unity
     guid: 959692aaa502d4c7ba5de6100eff66cb
-  - enabled: 1
+  - enabled: 0
     path: Assets/ProJect/Scene/CarMenu.unity
     guid: c75a4490231314d6bbff019dca293d57
-  - enabled: 1
+  - enabled: 0
     path: Assets/ProJect/Scene/CarPaint_Quality_Very Low.unity
     guid: 4fa9a03197b094dc8b958a0bf4b468a8
   - enabled: 0
     path: Assets/ProJect/Scene/FactorMenu.unity
     guid: 653877f0b37d448d7bfdf90ec0db1630
-  - enabled: 1
+  - enabled: 0
     path: Assets/JL/Scenes/JL.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   m_configObjects:
