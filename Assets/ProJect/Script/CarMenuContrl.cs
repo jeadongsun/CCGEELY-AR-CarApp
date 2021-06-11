@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.ARSubsystems;
 using UnityEngine.SceneManagement;
-
+using UnityEngine.XR.Management;
 [RequireComponent(typeof(ARRaycastManager))]
 public class CarMenuContrl : MonoBehaviour
 {
@@ -24,11 +24,20 @@ public class CarMenuContrl : MonoBehaviour
     Vector3 screenCenter = new Vector3(Screen.width * 0.5f,Screen.height * 0.5f,0);
     ARRaycastManager aRRaycastManager;
 
+    public GameObject ARSessions;
+
+    private void Awake()
+    {
+        
+    }
+
     private void Start()
     {
         aRRaycastManager = GetComponent<ARRaycastManager>();
 
         planeManager = GetComponent<ARPlaneManager>();
+
+
     }
 
 
@@ -73,7 +82,7 @@ public class CarMenuContrl : MonoBehaviour
 
     public void BackMainMenuClick()
     {
-
+        ARSessions.GetComponent<ARSession>().Reset();
         SceneManager.LoadScene("MainMenu");
     }
 }

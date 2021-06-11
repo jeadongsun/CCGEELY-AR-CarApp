@@ -17,8 +17,8 @@ public class MobilemaxCamera : MonoBehaviour
     public float panSpeed = 0.3f;
     public float zoomDampening = 5.0f;
 
-    private float xDeg = 0.0f;
-    private float yDeg = 0.0f;
+    public  float xDeg = 0.0f;
+    public float yDeg = 0.0f;
     private float currentDistance;
     private float desiredDistance;
     private Quaternion currentRotation;
@@ -44,8 +44,9 @@ public class MobilemaxCamera : MonoBehaviour
         position = transform.position;        rotation = transform.rotation;        currentRotation = transform.rotation;        desiredRotation = transform.rotation;
 
 
-        xDeg = transform.eulerAngles.y + Vector3.Angle(Vector3.right, transform.right);
-        yDeg = transform.eulerAngles.x + Vector3.Angle(Vector3.up, transform.up);    }
+        // xDeg = transform.eulerAngles.y + Vector3.Angle(Vector3.right, transform.right);
+        //yDeg = transform.eulerAngles.x + Vector3.Angle(Vector3.up, transform.up);
+        //xDeg = -124;        //yDeg = -4;        Debug.Log("xDeg:" + xDeg);        Debug.Log("yDeg:" + yDeg);    }
 
 
 
@@ -94,7 +95,7 @@ public class MobilemaxCamera : MonoBehaviour
 
         position = target.position - (rotation * Vector3.forward * currentDistance);
 
-        position = position - targetOffset;
+        //position = position - targetOffset;
 
         transform.position = position;
 
