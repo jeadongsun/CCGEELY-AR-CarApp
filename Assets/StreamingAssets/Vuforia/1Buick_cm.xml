@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig>
+<Tracking>
+<ModelTarget name="1Buick_cm" motionHint="static" trackingMode="car"/>
+
+</Tracking>
+
+<Assembly name="1Buick_cms_assembly" assemblyId="8f3f11b1bf22436d840ebad857e15ce9">
+<Part name="1Buick_cm" translation="0 0 0" rotation="AD: 0 0 1 0"/>
+<EntryPoint name="viewpoint_0000" translation="-5.26177e-18 0.0279875 0.169434" rotation="AD: 0.9999999999999936 -0.000047549810546577565 0.002388430447405015 182.281" trained="no">
+
+</EntryPoint>
+
+</Assembly>
+
+</QCARConfig>

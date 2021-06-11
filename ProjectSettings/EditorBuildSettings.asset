@@ -5,10 +5,10 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/ProJect/Scene/MainMenu.unity
     guid: 959692aaa502d4c7ba5de6100eff66cb
-  - enabled: 1
+  - enabled: 0
     path: Assets/ProJect/Scene/CarMenu.unity
     guid: c75a4490231314d6bbff019dca293d57
   - enabled: 0
@@ -20,7 +20,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/JL/Scenes/JL.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
-  - enabled: 0
+  - enabled: 1
     path: Assets/ProJect/Scene/CarTrackMenu.unity
     guid: 417ee7a1af8e94c719c1e4f23b584138
   m_configObjects:

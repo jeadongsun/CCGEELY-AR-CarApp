@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARInfo>
+<TargetSet version="14.0" toolVersion="9.8.5">
+<ModelTarget name="1Buick_cm" targetId="b482b75af5c541a4b913bafa1f4f932d" version="11.1" toolVersion="9.8.5" bbox="-0.033242 -0.000104 -0.080635 0.033242 0.056123 0.080635" previewImage="b482b75af5c541a4b913bafa1f4f932d_preview.jpg"/>
+
+</TargetSet>
+
+<Assembly name="1Buick_cms_assembly" assemblyId="8f3f11b1bf22436d840ebad857e15ce9">
+<Part name="1Buick_cm" translation="0 0 0" rotation="AD: 0 0 1 0"/>
+<EntryPoint name="viewpoint_0000" translation="-5.26177e-18 0.0279875 0.169434" rotation="AD: 0.9999999999999936 -0.000047549810546577565 0.002388430447405015 182.281" image="1Buick_cm_viewpoint_0000.png" trained="no">
+
+</EntryPoint>
+
+</Assembly>
+
+</QCARInfo>
