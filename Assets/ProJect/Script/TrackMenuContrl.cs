@@ -16,6 +16,11 @@ public class TrackMenuContrl : MonoBehaviour
 
     public GameObject TestModel;
 
+    private void Awake()
+    {
+        
+    }
+
     private void Start()
     {
         MessageBg1.GetComponent<RectTransform>().DOSizeDelta(new Vector2(4, 0), 0);
@@ -29,6 +34,8 @@ public class TrackMenuContrl : MonoBehaviour
         MessageBg4.transform.DOLocalMoveY(-498, 0, false).SetEase(Ease.Linear);
 
         TestModel.SetActive(false);
+
+        Screen.orientation = ScreenOrientation.LandscapeLeft;
     }
 
 
