@@ -86,6 +86,7 @@ public class MainMenuContrl : MonoBehaviour
     public void OpenAR_CarTrackMenu()
     {
         AR_CarTrackMenu_Text.GetComponent<Text>().color = new Color(2 / 255,255 / 255,255 / 255,255 / 255);
+        SceneManager.LoadScene("CarTrackMenu");
     }
     //工厂沙盘
     public void OpenAR_FactorMenu()
