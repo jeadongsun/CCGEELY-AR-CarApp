@@ -17,10 +17,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/ProJect/Scene/FactorMenu.unity
     guid: 653877f0b37d448d7bfdf90ec0db1630
-  - enabled: 0
+  - enabled: 1
     path: Assets/JL/Scenes/JL.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
-  - enabled: 1
+  - enabled: 0
     path: Assets/ProJect/Scene/CarTrackMenu.unity
     guid: 417ee7a1af8e94c719c1e4f23b584138
   m_configObjects:
