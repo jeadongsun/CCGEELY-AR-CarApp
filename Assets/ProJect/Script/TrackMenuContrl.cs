@@ -16,12 +16,18 @@ public class TrackMenuContrl : MonoBehaviour
 
     public GameObject TestModel;
 
-    public GameObject Image1;
+    public GameObject[] Image1;
 
     public GameObject CameraModel;
+
+
     private void Update()
     {
-        Image1.transform.rotation = Quaternion.LookRotation(Image1.transform.position - CameraModel.transform.position);
+
+        for (int i = 0; i < Image1.Length; i++)
+        {
+            Image1[i].transform.rotation = Quaternion.LookRotation(Image1[i].transform.position - CameraModel.transform.position);
+        }
     }
 
     private void Start()
