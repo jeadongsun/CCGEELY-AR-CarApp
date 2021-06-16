@@ -51,11 +51,6 @@ public class CarMenuContrl : MonoBehaviour
                 item.gameObject.SetActive(false);
             }
         }
-        if (aRRaycastManager.Raycast(screenCenter, hit, TrackableType.PlaneWithinPolygon))
-        {
-            var hitPose = hit[0].pose;
-            Debug.Log("hit:" + hit[0].pose);
-        }
     }
 
     //放置物体
@@ -82,7 +77,20 @@ public class CarMenuContrl : MonoBehaviour
 
     public void BackMainMenuClick()
     {
+        Destroy(SpawnObj);
+        SpawnObj = null;
+        foreach (var item in planeManager.trackables)
+        {
+            Destroy(item.gameObject);
+        }
+        Resources.UnloadUnusedAssets();
         ARSessions.GetComponent<ARSession>().Reset();
+
+
+
+        SpawnUI.SetActive(true);
+        CarContrlUI.SetActive(false);
+
         SceneManager.LoadScene("MainMenu");
     }
 }

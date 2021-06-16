@@ -20,6 +20,8 @@ public class TrackMenuContrl : MonoBehaviour
 
     public GameObject CameraModel;
 
+    public GameObject UICamera;
+
 
     private void Update()
     {
@@ -45,12 +47,18 @@ public class TrackMenuContrl : MonoBehaviour
         TestModel.SetActive(false);
 
         Screen.orientation = ScreenOrientation.LandscapeLeft;
+
+        CameraModel.GetComponent<Camera>().depth = 1;
+        UICamera.GetComponent<Camera>().depth = 0;
     }
 
 
 
     public void OpenUI()
     {
+        CameraModel.GetComponent<Camera>().depth = 0;
+        UICamera.GetComponent<Camera>().depth = 1;
+
         MessageBg1.GetComponent<RectTransform>().DOSizeDelta(new Vector2(4, 680), 0.5f);
         MessageBg1.GetComponent<RectTransform>().DOAnchorPos(new Vector2(-951, 10), 0.5f);
 
@@ -75,6 +83,15 @@ public class TrackMenuContrl : MonoBehaviour
         MessageBg2.transform.DOLocalMoveX(-1176, 0.5f, false).SetEase(Ease.InOutQuad).SetDelay(0.5f);
 
         MessageBg1.GetComponent<RectTransform>().DOSizeDelta(new Vector2(4, 0), 0.5f).SetDelay(1f) ;
-        MessageBg1.GetComponent<RectTransform>().DOAnchorPos(new Vector2(-951, 10), 0.5f).SetDelay(1f) ;
+        MessageBg1.GetComponent<RectTransform>().DOAnchorPos(new Vector2(-951, 10), 0.5f).SetDelay(1f).OnComplete(() =>
+        {
+            CameraModel.GetComponent<Camera>().depth = 1;
+            UICamera.GetComponent<Camera>().depth = 0;
+        });
+    }
+
+    public void BackMainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
     }
 }
