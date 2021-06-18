@@ -12,8 +12,6 @@ public class CarMenuContrl : MonoBehaviour
 
     private GameObject SpawnObj;
 
-    public GameObject CarPlane;
-
     public GameObject SpawnUI;
 
     public GameObject CarContrlUI;
@@ -24,11 +22,10 @@ public class CarMenuContrl : MonoBehaviour
     Vector3 screenCenter = new Vector3(Screen.width * 0.5f,Screen.height * 0.5f,0);
     ARRaycastManager aRRaycastManager;
 
-    public GameObject ARSessions;
-
     private void Awake()
     {
         
+      
     }
 
     private void Start()
@@ -69,7 +66,6 @@ public class CarMenuContrl : MonoBehaviour
 
                 SpawnUI.SetActive(false);
                 CarContrlUI.SetActive(true);
-
                 
             }
         }
@@ -77,20 +73,13 @@ public class CarMenuContrl : MonoBehaviour
 
     public void BackMainMenuClick()
     {
-        Destroy(SpawnObj);
-        SpawnObj = null;
+        //ARSessions.GetComponent<ARSession>().Reset();
         foreach (var item in planeManager.trackables)
         {
             Destroy(item.gameObject);
         }
-        Resources.UnloadUnusedAssets();
-        ARSessions.GetComponent<ARSession>().Reset();
-
-
-
-        SpawnUI.SetActive(true);
-        CarContrlUI.SetActive(false);
-
+        Destroy(SpawnObj);
+        SpawnObj = null;
         SceneManager.LoadScene("MainMenu");
     }
 }
